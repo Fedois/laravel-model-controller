@@ -13,16 +13,22 @@
 
         <main>
             <div class="container">
-                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 align-items-center">
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
 
                     @foreach ($movies as $singleMovie)
-                        <div class="col">
+                        <div class="col mt-5">
                             <div class="p-3 border">
-                                <h2>{{ $singleMovie->title }}</h2>
-                                <p>TITOLO ORIGINALE: {{ $singleMovie->original_title }}</p>
-                                <p>NAZIONALITA': {{ $singleMovie->nationality }}</p>
-                                <p>DATA: {{ $singleMovie->date }}</p>
-                                <p>VOTO: {{ $singleMovie->vote }}</p>
+                                <div class="text-center">
+                                    <img class="mb-3" src="https://via.placeholder.com/200" alt="Placeholder">
+                                </div>
+
+                                <div class="film-info">
+                                    <h2>{{ $singleMovie->title }}</h2>
+                                    <p>TITOLO ORIGINALE: {{ $singleMovie->original_title }}</p>
+                                    <p>NAZIONALITA': {{ $singleMovie->nationality }}</p>
+                                    <p>DATA: {{ $singleMovie->date }}</p>
+                                    <p>VOTO: {{ $singleMovie->vote }}</p>
+                                </div>
                             </div>
                         </div>
                     @endforeach
