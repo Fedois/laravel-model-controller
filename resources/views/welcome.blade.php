@@ -16,8 +16,9 @@
                 <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
 
                     @foreach ($movies as $singleMovie)
-                        <div class="col mt-5">
-                            <div class="p-3 border">
+                        <div class="col my-4">
+                            <div class="p-2 border">
+                                <span>#{{ $singleMovie->id }}</span>
                                 <div class="text-center">
                                     <img class="mb-3" src="https://via.placeholder.com/200" alt="Placeholder">
                                 </div>
