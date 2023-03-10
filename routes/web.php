@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+// models
+use App\Http\Controllers\Guest\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'index']);

@@ -13,16 +13,20 @@
 
         <main>
             <div class="container">
-                <div class="row">
-                    <div class="col row-cols-6 text-center">
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 align-items-center">
 
-                        <div class="card">
-                            <div class="card-body">
-                                <h1 class="card-title">Laravel 9 + Bootstrap Template</h1>
+                    @foreach ($movies as $singleMovie)
+                        <div class="col">
+                            <div class="p-3 border">
+                                <h2>{{ $singleMovie->title }}</h2>
+                                <p>DESCRIZIONE: {{ $singleMovie->original_title }}</p>
+                                <p>NAZIONALITA': {{ $singleMovie->nationality }}</p>
+                                <p>DATA: {{ $singleMovie->date }}</p>
+                                <p>VOTO: {{ $singleMovie->vote }}</p>
                             </div>
                         </div>
-
-                    </div>
+                    @endforeach
+                
                 </div>
             </div>
         </main>
